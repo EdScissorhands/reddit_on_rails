@@ -1,0 +1,13 @@
+
+<h1><%= @post.title %> by <%= User.find_by(id: @post.author_id).username %></h1>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h3> back to <%= link_to Sub.find_by(id: @post.sub_id).title, sub_url(Sub.find_by(id: @post.sub_id)) %> </h3>
+
+<br>

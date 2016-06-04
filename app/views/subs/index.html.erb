@@ -1,0 +1,9 @@
+<h1>Subforum</h1>
+<!-- #iterate through the sub titles in a list -->
+<% @subs.each do |subtitle| %>
+<ul>
+  <li><%= link_to "#{subtitle.title}", sub_url(subtitle) %></li>
+</ul>
+<% end %>
+
+<br>

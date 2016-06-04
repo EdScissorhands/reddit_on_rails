@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<%= link_to "All the Subs", "/subs" %>
+<br>
+<%= link_to "Create a sub!", new_sub_url %>
+<head>
+  <title>Reddit</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+
+<%= button_to "Log out!", session_url, method: :delete %>
+</html>

@@ -1,0 +1,12 @@
+<h1><%= @sub.title %></h1>
+<br>
+<h2> Description </h2>
+<h3><%= @sub.description %></h3>
+
+<% @posts.each do |post| %>
+<ul>
+  <% if post.sub_id == @sub.id %>
+  <li><%= link_to "#{post.title}", post_url(post) %></li>
+  <% end  %>
+</ul>
+<% end %>
